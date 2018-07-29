@@ -1,0 +1,21 @@
+.wala{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.dropdown-menu {
+    width: 100%; 
+  }
+  .rapper{
+      padding: 20px;
+  }
+
+  footer{
+      height: 100px;
+      background-color: grey;
+
+  }
+  #foot{
+     text-align: center;
+  color: white;
+    }

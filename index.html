@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+
+<body>
+        <div class="container-fluid">
+                <div class="jumbotron text-center" id="jumbo">
+                        <h1>Time Management App</h1>
+                        <p>Even you're not productive, at least you know how long you procrastinate ¯\_(ツ)_/¯</p>
+                </div>
+
+                <div class="col-sm-8">
+                        <input class="form-control" type="text" name="activity" placeholder="What are you doing now?" id="activityInput">
+                </div>
+                <div class="col-sm-2">
+                        <div class="dropdown">
+                                <button class="btn btn-default btn-block dropdown-toggle" type="button" data-toggle="dropdown">Tags
+                                        <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+
+                                        <li class="wala">
+                                                <input type="radio" name="tags" value="tag" checked="checked">None
+                                        </li>
+                                        <div id="tags">
+                                        </div>
+                                        <li class="wala">
+                                                <input class="form-control" type="text" name="activity" placeholder="Type some tags..." id="tagInput">
+                                        </li class="wala">
+                                        <li class="wala">
+                                                <button type="button" class="btn btn-default btn-block" id="addTag">Add</button>
+                                        </li>
+                                </ul>
+                        </div>
+                </div>
+                <div class="col-sm-2">
+                        <button type="button" class="btn btn-default btn-block" id="start">Start</button>
+                        <button type="button" class="btn btn-default btn-block" id="stop">Stop</button>
+                </div>
+
+
+        </div>
+        <div class="alert alert-danger" id="warning">
+                Please write your activity.
+        </div>
+        <div class="rapper">
+                <canvas id="pie-chart" width="800" height="450"></canvas>
+
+        </div>
+        <div class="container-fluid">
+                <div class="col-sm-6">
+                </div>
+                <div class="col-sm-2">
+                        <div class="dropdown">
+                                <button class="btn btn-default btn-block dropdown-toggle" type="button" data-toggle="dropdown">Chart Type
+                                        <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                        <li class="wala">
+                                                Pie
+                                        </li>
+                                </ul>
+                        </div>
+                </div>
+                <div class="col-sm-2">
+
+
+                        <div class="dropdown">
+                                <button class="btn btn-default btn-block dropdown-toggle" type="button" data-toggle="dropdown">Time
+                                        <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                        <li class="wala">
+                                                This Week
+                                        </li>
+                                </ul>
+                        </div>
+                </div>
+                <div class="col-sm-2">
+                        <button type="button" class="btn btn-default btn-block">Print</button>
+                </div>
+        </div>
+        <br>
+        <div class="container-fluid">
+                <div class="col-sm-2">
+                        <button class="btn btn-default btn-block" data-toggle="collapse" data-target="#demo">Detalis</button>
+                </div>
+                <div class="col-sm-8">
+
+                </div>
+        </div>
+        <div id="demo" class="collapse">
+                <table class="table">
+                        <thead>
+                                <tr>
+                                        <th>Activity</th>
+                                        <th>Tag</th>
+                                        <th>Duration</th>
+                                        <th></th>
+                                </tr>
+                        </thead>
+                        <tbody id=acts>
+
+                        </tbody>
+                </table>
+        </div>
+
+
+        <script src="index.js"></script>
+        <script src="chart.js"></script>
+</body>
+<footer>
+        <p id="foot">Satrio haryo
+                <br>2018</p>
+</footer>
+
+</html>
